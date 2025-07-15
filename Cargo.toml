@@ -1,0 +1,14 @@
+[package]
+name = "pulsecsv"
+version = "1.0.0"
+edition = "2021"
+description = "Ultra-fast CSV processor with real-time progress and advanced filtering"
+authors = ["mrqs"]
+license = "MIT"
+
+[dependencies]
+rayon = "1.7"
+memmap2 = "0.9"
+memchr = "2.6"
+clap = { version = "4.4", features = ["derive"] }
+humantime = "2.1"
