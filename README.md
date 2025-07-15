@@ -31,7 +31,7 @@ The binary will be available at `target/release/pulsecsv`
 ### Basic Usage
 Extract email and username from colon-separated file:
 ```bash
-./pulsecsv --input sample.csv --output sample.csv --fields 1,2
+./pulsecsv --input sample.csv --output output.csv --fields 1,2
 ```
 
 ### Advanced Usage
@@ -39,7 +39,7 @@ Process a large file with filtering:
 ```bash
 ./pulsecsv \
   --input sample.csv \
-  --output sample.csv \
+  --output output.csv \
   --fields 1,2 \
   --filter-equal 0,2 \
   --delimiter :
@@ -61,23 +61,23 @@ Process a large file with filtering:
 ### 1. Extract Email and Username
 ```bash
 # From colon-separated file
-./pulsecsv --input sample.csv --output sample.csv --fields 1,2
+./pulsecsv --input sample.csv --output output.csv --fields 1,2
 
 # From comma-separated file
-./pulsecsv --input sample.csv --output sample.csv --fields 1,2 --delimiter ,
+./pulsecsv --input sample.csv --output output.csv --fields 1,2 --delimiter ,
 ```
 
 ### 2. Filter Numeric Usernames
 Filter out rows where user_id equals username_or_id:
 ```bash
-./pulsecsv --input sample.csv --output sample.csv --fields 1,2 --filter-equal 0,2
+./pulsecsv --input sample.csv --output output.csv --fields 1,2 --filter-equal 0,2
 ```
 
 ### 3. Custom Field Extraction
 Extract specific fields from any format:
 ```bash
 # Extract fields 0,3,5 from tab-separated file
-./pulsecsv --input sample.tsv --output extracted.csv --fields 0,3,5 --delimiter $'\t'
+./pulsecsv --input sample.tsv --output output.csv --fields 0,3,5 --delimiter $'\t'
 ```
 
 ## 📊 Performance
@@ -112,7 +112,7 @@ Extract specific fields from any format:
 ### Real-world Processing
 ```bash
 # Process with custom delimiter
-./pulsecsv --input sample.tsv --output results.csv --fields 0,3 --delimiter $'\t'
+./pulsecsv --input sample.tsv --output output.csv --fields 0,3 --delimiter $'\t'
 ```
 
 ## 🛡️ Error Handling
