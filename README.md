@@ -1,6 +1,6 @@
 # 🚀 PulseCSV - Ultra-Fast CSV Processor
 
-A blazing-fast, memory-efficient CSV processor built in Rust for handling massive datasets with real-time progress tracking and advanced filtering capabilities.
+A blazing-fast, memory-efficient CSV processor built in Rust for handling massive samplesets with real-time progress tracking and advanced filtering capabilities.
 
 ## ✨ Features
 
@@ -19,7 +19,7 @@ A blazing-fast, memory-efficient CSV processor built in Rust for handling massiv
 
 ### Build from Source
 ```bash
-git clone <repository-url>
+git clone https://github.com/mrqs001/PulseCSV
 cd pulsecsv
 cargo build --release
 ```
@@ -31,15 +31,15 @@ The binary will be available at `target/release/pulsecsv`
 ### Basic Usage
 Extract email and username from colon-separated file:
 ```bash
-./pulsecsv --input data.csv --output emails_and_usernames.csv --fields 1,2
+./pulsecsv --input sample.csv --output sample.csv --fields 1,2
 ```
 
 ### Advanced Usage
 Process a large file with filtering:
 ```bash
 ./pulsecsv \
-  --input data.csv \
-  --output filtered.csv \
+  --input sample.csv \
+  --output sample.csv \
   --fields 1,2 \
   --filter-equal 0,2 \
   --delimiter :
@@ -61,23 +61,23 @@ Process a large file with filtering:
 ### 1. Extract Email and Username
 ```bash
 # From colon-separated file
-./pulsecsv --input sample.csv --output emails.csv --fields 1,2
+./pulsecsv --input sample.csv --output sample.csv --fields 1,2
 
 # From comma-separated file
-./pulsecsv --input data.csv --output emails.csv --fields 1,2 --delimiter ,
+./pulsecsv --input sample.csv --output sample.csv --fields 1,2 --delimiter ,
 ```
 
 ### 2. Filter Numeric Usernames
 Filter out rows where user_id equals username_or_id:
 ```bash
-./pulsecsv --input sample.csv --output filtered.csv --fields 1,2 --filter-equal 0,2
+./pulsecsv --input sample.csv --output sample.csv --fields 1,2 --filter-equal 0,2
 ```
 
 ### 3. Custom Field Extraction
 Extract specific fields from any format:
 ```bash
 # Extract fields 0,3,5 from tab-separated file
-./pulsecsv --input data.tsv --output extracted.csv --fields 0,3,5 --delimiter $'\t'
+./pulsecsv --input sample.tsv --output extracted.csv --fields 0,3,5 --delimiter $'\t'
 ```
 
 ## 📊 Performance
@@ -88,7 +88,7 @@ Extract specific fields from any format:
 | 10 GB     | ~10-20 seconds  | ~100MB       | 500 MB/s   |
 | 100 GB    | ~2-3 minutes    | ~100MB       | 500 MB/s   |
 
-*Performance varies by hardware and data characteristics*
+*Performance varies by hardware and sample characteristics*
 
 ## 🏗️ Architecture
 
@@ -99,7 +99,7 @@ Extract specific fields from any format:
 
 ## 🧪 Examples
 
-### Sample Data Processing
+### Sample sample Processing
 ```bash
 # Process sample file
 ./pulsecsv --input sample.csv --output output.csv --fields 1,2 --filter-equal 0,2
@@ -112,7 +112,7 @@ Extract specific fields from any format:
 ### Real-world Processing
 ```bash
 # Process with custom delimiter
-./pulsecsv --input data.tsv --output results.csv --fields 0,3 --delimiter $'\t'
+./pulsecsv --input sample.tsv --output results.csv --fields 0,3 --delimiter $'\t'
 ```
 
 ## 🛡️ Error Handling
